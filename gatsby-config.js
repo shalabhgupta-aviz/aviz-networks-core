@@ -26,14 +26,5 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    {
-      resolve: "gatsby-source-graphql",
-      options: {
-        typeName: "PAYLOAD",
-        fieldName: "payload",
-        url: "https://your-payload-cms-endpoint/graphql",
-        // Replace "https://your-payload-cms-endpoint/graphql" with your Payload CMS GraphQL endpoint.
-      },
-    },
   ],
 }
