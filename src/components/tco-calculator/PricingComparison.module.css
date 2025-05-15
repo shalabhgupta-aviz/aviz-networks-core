@@ -1,0 +1,41 @@
+.container {
+    width: 728px;
+    max-width: 100%;
+  }
+  
+  .header {
+    background: linear-gradient(180deg, #6c44de 0%, #500d70 100%);
+    border-radius: 17px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    display: flex;
+  }
+  
+  .categoryTitle, .vendorTitle {
+    color: #070710;
+    font-family: Noto Sans;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .pricingList {
+    margin-top: 24px;
+  }
+  
+  .pricingItem {
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    font-family: Noto Sans;
+    font-size: 22px;
+    font-weight: 700;
+    display: flex;
+  }
+  
+  .pricingItem:last-child {
+    margin-bottom: 0;
+  }
+  

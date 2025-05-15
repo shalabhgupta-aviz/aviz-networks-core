@@ -1,0 +1,56 @@
+.container {
+    width: 100%;
+  }
+  
+  .speedTabs {
+    justify-content: center;
+    gap: 15px;
+    max-width: 100%;
+    margin-top: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    overflow-x: auto;
+  }
+  
+  @media (max-width: 640px) {
+    .speedTabs {
+      flex-wrap: wrap;
+    }
+  }
+  
+  .tabWrapper {
+    flex-direction: column;
+    align-items: center;
+    min-width: 185px;
+    display: flex;
+  }
+  
+  .speedTab {
+    width: 185px;
+    height: 50px;
+    border-radius: 25px 25px 0 0;
+    font-family: Noto Sans;
+    font-size: 22px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .activeTab {
+    color: #fff;
+    background-color: #6c44de;
+  }
+  
+  .inactiveTab {
+    color: #000;
+    background-color: #fff;
+  }
+  
+  .gradientBar {
+    background: linear-gradient(90deg, #6c44de 0%, #500d70 100%);
+    width: 100%;
+    height: 5px;
+    margin-top: -1px;
+  }
+  

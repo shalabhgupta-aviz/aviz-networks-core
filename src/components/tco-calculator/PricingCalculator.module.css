@@ -1,0 +1,117 @@
+.container {
+    min-height: 100vh;
+    background-color: #070710;
+    flex-direction: column;
+    display: flex;
+  }
+  
+  .calculatorSection {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+  }
+  
+  @media (max-width: 640px) {
+    .calculatorSection {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+  
+  .mainTitle {
+    color: #fff;
+    text-align: center;
+    max-width: 1135px;
+    font-family: Noto Sans;
+    font-size: 68px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  @media (max-width: 991px) {
+    .mainTitle {
+      font-size: 48px;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .mainTitle {
+      font-size: 36px;
+    }
+  }
+  
+  .purpleBar {
+    background-color: #6e4beb;
+    width: 144px;
+    height: 10px;
+    margin-top: 24px;
+  }
+  
+  .subtitle {
+    color: #fff;
+    text-align: center;
+    margin-top: 80px;
+    font-family: Noto Sans;
+    font-size: 42px;
+    font-weight: 700;
+  }
+  
+  @media (max-width: 991px) {
+    .subtitle {
+      font-size: 32px;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .subtitle {
+      font-size: 24px;
+    }
+  }
+  
+  .yearSelector {
+    justify-content: center;
+    gap: 24px;
+    margin-top: 40px;
+    display: flex;
+  }
+  
+  .yearButton {
+    color: #fff;
+    font-family: Noto Sans;
+    font-size: 22px;
+    font-weight: 700;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .yearButtonOutlined {
+    color: #fff;
+    border-width: 3px;
+    border-color: #6b42db;
+    border-radius: 15px;
+    width: 154px;
+    height: 68px;
+    font-family: Noto Sans;
+    font-size: 22px;
+    font-weight: 700;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .pricingSection {
+    gap: 24px;
+    margin-top: 80px;
+    display: flex;
+  }
+  
+  @media (max-width: 991px) {
+    .pricingSection {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

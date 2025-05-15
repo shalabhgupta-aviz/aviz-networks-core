@@ -1,10 +1,11 @@
 import React from "react"
 import Layout from "../components/layout"
+import PricingCalculator from "../components/tco-calculator/PricingCalculator"
 
 function TCO() {
   return (
     <Layout>
-      <div>TCO</div>
+      <PricingCalculator />
     </Layout>
   )
 }
