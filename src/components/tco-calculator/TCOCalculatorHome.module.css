@@ -1,0 +1,118 @@
+.container {
+    min-height: 100vh;
+    background-color: #070710;
+    flex-direction: column;
+    display: flex;
+    position: relative;
+  }
+
+  .titleContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 0px;
+    padding-bottom: 133px;
+    margin: 0 auto;
+    max-width: 80%;
+  }
+
+  .dotCircle {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 670px;
+    height: 690px;
+  }
+
+  .mainTitle {
+    color: #fff;
+    text-align: center;
+    max-width: 1000px;
+    font-family: Noto Sans;
+    font-size: 68px;
+    font-weight: 700;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+    margin-top: 200px;
+  }
+
+  .purpleBar {
+    background-color: #6e4beb;
+    width: 144px;
+    height: 10px;
+    margin-top: 10px;
+    margin-left: -10px;
+  }
+
+  .digitalToolImageContainer {
+    width: 443px;
+  }
+
+  .calculatorBodyContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .calculatorBox {
+    background: rgba(24, 18, 48, 0.7);
+    border: 2px solid #7c5fff;
+    border-radius: 18px;
+    padding: 36px 32px 32px 32px;
+    min-width: 320px;
+    max-width: 400px;
+    flex: 1 1 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    box-shadow: 0 0 24px 0 rgba(124,95,255,0.10);
+  }
+
+  .boxLogo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 18px;
+    object-fit: contain;
+  }
+
+  .boxTitle {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 10px;
+    letter-spacing: 0.01em;
+  }
+
+  .boxDescription {
+    color: #bdb8e0;
+    font-size: 1rem;
+    margin: 0;
+    margin-bottom: 28px;
+    line-height: 1.5;
+    max-width: 90%;
+  }
+
+  .calculateButton {
+    background: #7c5fff;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px 0 rgba(124,95,255,0.15);
+    transition: background 0.2s;
+    align-self: flex-start;
+  }
+
+  .calculateButton:hover {
+    background: #6e4beb;
+  }

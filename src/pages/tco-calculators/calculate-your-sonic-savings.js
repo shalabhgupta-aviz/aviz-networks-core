@@ -5,7 +5,7 @@ import PricingCalculator from "../../components/tco-calculator/PricingCalculator
 function TCOCalculateYourSonicSavings() {
   return (
     <Layout>
-      <PricingCalculator />
+      <PricingCalculator title="Calculate Your Savings with SONiC &amp; ONES" />
     </Layout>
   )
 }

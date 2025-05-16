@@ -7,7 +7,7 @@ import PricingComparison from "./PricingComparison"
 import SavingsCard from "./SavingsCard"
 import TopRectangleVector from "../common/TopRectangleVector"
 import BottomRectangleVector from "../common/BottomRectangleVector"
-function PricingCalculator() {
+function PricingCalculator({ title }) {
   return (
     <>
       <main className={styles.container}>
@@ -19,7 +19,7 @@ function PricingCalculator() {
               className={styles.dotCircle}
             />
             <h1 className={styles.mainTitle}>
-              Calculate Your Savings with SONiC &amp; ONES
+              {title}
               <div className={styles.purpleBar} />
             </h1>
           </div>

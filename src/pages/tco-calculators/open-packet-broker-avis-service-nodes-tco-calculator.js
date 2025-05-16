@@ -5,7 +5,7 @@ import PricingCalculator from "../../components/tco-calculator/PricingCalculator
 function TCOOpenPacketBrokerAvisServiceNodesTCOCalculator() {
   return (
     <Layout>
-      <PricingCalculator />
+      <PricingCalculator title="Open Packet Broker & Avis Service Nodes TCO Calculator" />
     </Layout>
   )
 }
