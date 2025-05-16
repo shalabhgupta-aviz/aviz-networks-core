@@ -1,9 +1,12 @@
 .header {
-  margin: 0 auto;
-  padding: var(--space-4) var(--size-gutter);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 82px 143px;
+  /* position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #070710; */
 }
 
 .logo {
@@ -36,7 +39,7 @@
 
 .navigation {
   align-items: center;
-  gap: 48px;
+  gap: 113px;
   display: flex;
 }
 
