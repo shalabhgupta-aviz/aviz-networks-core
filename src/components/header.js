@@ -6,33 +6,37 @@ import logo from "../images/aviz_logo.svg"
 const Header = ({ siteTitle }) => (
   <header className={styles.header}>
     <div className={styles.logo}>
-      <img src={logo} alt="Aviz Logo" />
+      <Link to="/">
+        <img src={logo} alt="Aviz Logo" />
+      </Link>
     </div>
     <nav className={styles.navigation}>
-      <a href="#" className={styles.navLink}>
+      <Link to="/" className={styles.navLink}>
         About us
-      </a>
-      <a href="#" className={styles.navLink}>
+      </Link>
+      <Link to="/" className={styles.navLink}>
         Product
-      </a>
-      <a href="#" className={styles.navLink}>
+      </Link>
+      <Link to="/" className={styles.navLink}>
         Solutions
-      </a>
-      <a href="#" className={styles.navLink}>
+      </Link>
+      <Link to="/" className={styles.navLink}>
         Resources
-      </a>
-      <a href="#" className={styles.navLink}>
+      </Link>
+      <Link to="/" className={styles.navLink}>
         Partners
-      </a>
-      <a href="#" className={styles.navLink}>
+      </Link>
+      <Link to="/" className={styles.navLink}>
         For You
-      </a>
+      </Link>
     </nav>
     <div className={styles.actions}>
-      <button className={styles.menuButton}>
+      <button className={styles.menuButton} aria-label="Toggle menu">
         <i className={styles.menuIcon}></i>
       </button>
-      <button className={styles.contactButton}>Contact Us</button>
+      <Link to="/" className={styles.contactButton}>
+        Contact Us
+      </Link>
     </div>
   </header>
 )

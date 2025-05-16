@@ -87,12 +87,14 @@
   color: #efeff0;
   background-color: #110415;
   border-width: 2px;
+  border-style: solid;  
   border-color: #fff;
   border-radius: 27.5px;
   padding: 14px 24px;
   font-family: Noto Sans;
   font-size: 16px;
   font-weight: 600;
+  text-decoration: none;
   cursor: pointer;
 }
   

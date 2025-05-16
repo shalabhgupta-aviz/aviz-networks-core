@@ -32,5 +32,22 @@ module.exports = {
         fonts: ["Noto Sans"],
       },
     },
+    {
+      resolve: "gatsby-plugin-redirects",
+      options: {
+        redirects: [
+          {
+            fromPath: "/old-path",
+            toPath: "/new-path",
+            isPermanent: true,
+          },
+          {
+            fromPath: "/products",
+            toPath: "/solutions",
+            isPermanent: true,
+          },
+        ],
+      },
+    },
   ],
 }
