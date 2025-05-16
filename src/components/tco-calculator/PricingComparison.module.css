@@ -8,7 +8,7 @@
     border-radius: 17px;
     justify-content: space-between;
     align-items: center;
-    padding: 24px;
+    padding: 18px 81px;
     display: flex;
   }
   
@@ -33,6 +33,12 @@
     font-size: 22px;
     font-weight: 700;
     display: flex;
+    padding: 18px 30px;
+    border-radius: 17px;
+  }
+
+  .pricingItem:nth-child(2n) {
+    background: linear-gradient(180deg, rgba(108, 68, 222, 0.50) 0%, rgba(80, 13, 112, 0.50) 100%);
   }
   
   .pricingItem:last-child {

@@ -41,7 +41,7 @@
   
   .activeTab {
     color: #fff;
-    background-color: #6c44de;
+    background: transparent;
   }
   
   .inactiveTab {
