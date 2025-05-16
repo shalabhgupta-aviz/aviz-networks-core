@@ -9,10 +9,6 @@ import SavingsCard from "./SavingsCard"
 function PricingCalculator() {
   return (
     <>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap"
-        rel="stylesheet"
-      />
       <main className={styles.container}>
         <section className={styles.calculatorSection}>
           <div className={styles.titleContainer}>
@@ -21,11 +17,11 @@ function PricingCalculator() {
               alt="Vector 1"
               className={styles.vector1}
             />
-            {/* <StaticImage
-              src={"../../images/Vector2.png"}
+            <StaticImage
+              src={"../../images/dot-circle-bg.png"}
               alt="Vector 2"
               className={styles.vector2}
-              /> */}
+            />
             <StaticImage
               src={"../../images/Vector3.png"}
               alt="Vector 3"

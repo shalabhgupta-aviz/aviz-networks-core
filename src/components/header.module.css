@@ -5,8 +5,10 @@
   padding: 82px 143px;
   /* position: sticky;
   top: 0;
-  z-index: 100;
-  background: #070710; */
+  z-index: 100; */
+  position: relative;
+  z-index: 1;
+  /* background: #070710; */
 }
 
 .logo {

@@ -1,6 +1,8 @@
 .container {
     width: 728px;
     max-width: 100%;
+    position: relative;
+    top: 85px;
   }
   
   .header {
@@ -8,7 +10,7 @@
     border-radius: 17px;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 81px;
+    padding: 18px 0px;
     display: flex;
   }
   
@@ -18,27 +20,43 @@
     font-size: 22px;
     font-weight: 700;
     margin: 0;
-  }
+    width: 40%;
+    text-align: center;
+}
   
+.vendorTitle {
+    margin-right: 100px;
+}
+
   .pricingList {
-    margin-top: 24px;
+    margin-top: 0px;
   }
   
   .pricingItem {
     color: #fff;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: 0px;
     font-family: Noto Sans;
     font-size: 22px;
     font-weight: 700;
     display: flex;
-    padding: 18px 30px;
+    padding: 36px 0px;
     border-radius: 17px;
+  }
+
+  .pricingItem > div {
+    width: 40%;
+    text-align: center;
+  }
+
+  .pricingItem > div:nth-child(2) {
+    margin-right: 100px;
   }
 
   .pricingItem:nth-child(2n) {
     background: linear-gradient(180deg, rgba(108, 68, 222, 0.50) 0%, rgba(80, 13, 112, 0.50) 100%);
+    padding: 18px 0;
   }
   
   .pricingItem:last-child {

@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import PricingCalculator from "../components/tco-calculator/PricingCalculator"
 
-function TCO() {
+function TCOHome() {
   return (
     <Layout>
       <PricingCalculator />
@@ -10,4 +10,4 @@ function TCO() {
   )
 }
 
-export default TCO
+export default TCOHome

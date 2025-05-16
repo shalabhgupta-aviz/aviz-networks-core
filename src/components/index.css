@@ -4,5 +4,6 @@
     box-sizing: border-box;
 }
 
-html, body {
+body {
+    background-color: #070710;
 }
