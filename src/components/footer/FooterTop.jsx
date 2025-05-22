@@ -12,7 +12,10 @@ function FooterTop() {
     { url: "/", text: "Newsroom" },
     { url: "/", text: "Partners" },
     { url: "/", text: "Training and Certification" },
-    { url: "/", text: "TCO Calculator" },
+    {
+      url: "/calculate-your-savings-sonic-ones-network-observability-aviz-networks",
+      text: "TCO Calculator",
+    },
     { url: "/", text: "Contact us" },
   ]
 
