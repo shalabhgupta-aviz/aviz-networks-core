@@ -1,19 +1,28 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import * as styles from "./TabsSection.module.css"
+import BlogList from "./blog/BlogList"
+import { navigate } from "gatsby"
 
 const TABS = [
-  { label: "Blogs", value: "blogs" },
-  { label: "Case Studies", value: "case-studies" },
-  { label: "Solution Briefs", value: "solution-briefs" },
-  { label: "Guides", value: "guides" },
-  { label: "Reports", value: "reports" },
-  { label: "Videos", value: "videos" },
+  { label: "Blogs", value: 0, url: "/resources/blogs" },
+  { label: "Case Studies", value: 1, url: "/resources/case-studies" },
+  { label: "Solution Briefs", value: 2, url: "/resources/solution-briefs" },
+  { label: "Guides", value: 3, url: "/resources/guides" },
+  { label: "Reports", value: 4, url: "/resources/reports" },
+  { label: "Videos", value: 5, url: "/resources/videos" },
 ]
 
 const SIDE_CATEGORIES = [
   { label: "All", value: "all" },
+  { label: "Announcements", value: "announcements" },
+  { label: "Aviz Generic Solution", value: "aviz-generic-solution" },
+  {
+    label: "Fabric Test Automation Suite",
+    value: "fabric-test-automation-suite",
+  },
   { label: "Network Observability", value: "network-observability" },
   { label: "Open Networking Enterprise Suite", value: "ones" },
+  { label: "Open Packet Broker", value: "open-packet-broker" },
   { label: "SONiC", value: "sonic" },
 ]
 
@@ -45,9 +54,15 @@ const CARDS = [
   // Add more mock cards as needed
 ]
 
-function TabsSection() {
-  const [activeTab, setActiveTab] = useState("case-studies")
+function TabsSection({ resourcename }) {
+  const [activeTab, setActiveTab] = useState(null)
   const [activeCategory, setActiveCategory] = useState("all")
+
+  useEffect(() => {
+    if (resourcename === "blogs") {
+      setActiveTab(0)
+    }
+  }, [resourcename])
 
   const filteredCards = CARDS.filter(
     card =>
@@ -62,7 +77,10 @@ function TabsSection() {
           <button
             key={tab.value}
             className={activeTab === tab.value ? styles.activeTab : styles.tab}
-            onClick={() => setActiveTab(tab.value)}
+            onClick={() => {
+              setActiveTab(tab.value)
+              navigate(tab.url)
+            }}
             aria-current={activeTab === tab.value ? "page" : undefined}
           >
             {tab.label}
@@ -87,30 +105,7 @@ function TabsSection() {
           ))}
         </aside>
         <div className={styles.cardsList}>
-          {filteredCards.length === 0 ? (
-            <p className={styles.noResults}>No results found.</p>
-          ) : (
-            <ul className={styles.cardsGrid}>
-              {filteredCards.map(card => (
-                <li key={card.id} className={styles.card}>
-                  <img
-                    src={card.image}
-                    alt=""
-                    className={styles.cardImage}
-                    loading="lazy"
-                  />
-                  <div className={styles.cardContent}>
-                    <time className={styles.cardDate}>{card.date}</time>
-                    <h3 className={styles.cardTitle}>{card.title}</h3>
-                    <p className={styles.cardDesc}>{card.description}</p>
-                    <a href={card.link} className={styles.cardLink}>
-                      Read Case Study
-                    </a>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          )}
+          <BlogList />
         </div>
       </div>
     </section>

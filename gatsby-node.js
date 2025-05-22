@@ -11,15 +11,8 @@ exports.createPages = async ({ actions }) => {
 
   // Dynamic redirects
   createRedirect({
-    fromPath: `/blog/*`,
-    toPath: `/articles/:splat`,
-    isPermanent: true,
-  })
-
-  // You can add more dynamic redirects here
-  createRedirect({
-    fromPath: `/old-blog/*`,
-    toPath: `/blog/:splat`,
+    fromPath: `/resources/blogs/*`,
+    toPath: `/resources/blogs/:splat`,
     isPermanent: true,
   })
 }
