@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import * as styles from "./TabsSection.module.css"
-import BlogList from "./blog/BlogList"
+import BlogList from "./blog/List"
 import { navigate } from "gatsby"
 
 const TABS = [
@@ -105,7 +105,7 @@ function TabsSection({ resourcename }) {
           ))}
         </aside>
         <div className={styles.cardsList}>
-          <BlogList />
+          {activeTab === 0 && <BlogList />}
         </div>
       </div>
     </section>
