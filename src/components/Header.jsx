@@ -14,10 +14,7 @@ const Header = ({ siteTitle }) => (
       <Link to="/" className={styles.navLink}>
         About us
       </Link>
-      <Link
-        to="/calculate-your-savings-sonic-ones-network-observability-aviz-networks"
-        className={styles.navLink}
-      >
+      <Link to="/" className={styles.navLink}>
         Product
       </Link>
       <Link to="/" className={styles.navLink}>
