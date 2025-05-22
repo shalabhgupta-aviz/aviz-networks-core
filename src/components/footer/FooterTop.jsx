@@ -22,7 +22,7 @@ function FooterTop() {
   const companyLinks = [
     { url: "/", text: "About Us" },
     { url: "/", text: "Our Team" },
-    { url: "/resources/blogs", text: "Blog" },
+    { url: "/resources/", text: "Blog" },
     { url: "/", text: "ONES Validated Design (OVD)" },
     { url: "/", text: "AVIZ Certified SONiC Professional (ACSI)" },
     { url: "/", text: "Support" },

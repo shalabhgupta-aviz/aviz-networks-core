@@ -1,0 +1,29 @@
+.searchResourceSection {
+    background-color: #9A57DE;
+    padding: 48px 0;
+    width: 100%;
+}
+
+.searchBarWrapper {
+    width: 100%;
+    max-width: 1524px;
+    margin: 0 auto;
+    margin-bottom: 0;
+  }
+  
+  .searchBar {
+    width: 100%;
+    padding: 18px 28px;
+    border-radius: 32px;
+    border: none;
+    font-size: 1.1rem;
+    background: #fff;
+    color: #333;
+    box-shadow: 0 2px 16px 0 rgba(110, 75, 235, 0.10);
+    outline: none;
+    transition: box-shadow 0.2s;
+  }
+  
+  .searchBar:focus {
+    box-shadow: 0 0 0 3px #a259c6;
+  }
