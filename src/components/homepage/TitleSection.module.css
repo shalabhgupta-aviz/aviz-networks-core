@@ -1,0 +1,140 @@
+.heroSection {
+    display: flex;
+    justify-content: space-between;
+    padding: 216px 200px 0;
+    position: relative;
+  }
+  
+  .contentContainer {
+    max-width: 1154px;
+  }
+  
+  .heading {
+    background: linear-gradient(90deg, #fff 0%, #999 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    margin-bottom: 365px;
+    font-family: Noto Sans, sans-serif;
+    font-size: 94px;
+    line-height: 128px;
+    font-weight: normal;
+  }
+  
+  .headingBold {
+    font-weight: 700;
+  }
+  
+  .subheading {
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #fff 0%, #d0d0d0 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-family: Noto Sans, sans-serif;
+    font-size: 32px;
+    line-height: 52px;
+    font-weight: normal;
+  }
+  
+  .rightContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 218px;
+    right: 200px;
+  }
+  
+  .description {
+    color: #fff;
+    text-align: right;
+    margin-top: 504px;
+    margin-bottom: 95px;
+    font-family: Noto Sans, sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    gap: 21px;
+  }
+  
+  .primaryButton {
+    color: #fff;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-family: Noto Sans, sans-serif;
+    font-size: 22px;
+    border: none;
+  }
+  
+  .secondaryButton {
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-family: Noto Sans, sans-serif;
+    font-size: 22px;
+    background: transparent;
+  }
+  
+  @media (max-width: 991px) {
+    .heroSection {
+      padding: 100px 20px 0;
+    }
+  
+    .heading {
+      margin-bottom: 200px;
+      font-size: 60px;
+      line-height: 80px;
+    }
+  
+    .rightContent {
+      align-items: center;
+      margin-top: 50px;
+      position: relative;
+      top: auto;
+      right: auto;
+    }
+  
+    .description {
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .heroSection {
+      padding: 50px 10px 0;
+    }
+  
+    .heading {
+      margin-bottom: 100px;
+      font-size: 40px;
+      line-height: 50px;
+    }
+  
+    .subheading {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  
+    .description {
+      font-size: 18px;
+    }
+  
+    .buttonGroup {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+    }
+  
+    .primaryButton, .secondaryButton {
+      width: 100%;
+    }
+  }
+  

@@ -9,7 +9,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Aviz Networks`,
+    title: `AI Networking Stack with Network Copilot`,
     description: `Next-gen networking solutions`,
     author: `@AvizNetworks`,
     siteUrl: `https://aviznetworks.com`,
@@ -24,29 +24,6 @@ module.exports = {
       options: {
         name: "images",
         path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: "gatsby-plugin-google-fonts",
-      options: {
-        fonts: ["Noto Sans"],
-      },
-    },
-    {
-      resolve: "gatsby-plugin-redirects",
-      options: {
-        redirects: [
-          {
-            fromPath: "/old-path",
-            toPath: "/new-path",
-            isPermanent: true,
-          },
-          {
-            fromPath: "/products",
-            toPath: "/solutions",
-            isPermanent: true,
-          },
-        ],
       },
     },
   ],
