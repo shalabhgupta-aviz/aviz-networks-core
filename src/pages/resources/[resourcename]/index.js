@@ -7,7 +7,7 @@ import SearchResourceSection from "../../../components/resources/SearchResourceS
 
 const ResourcesPage = ({ params }) => {
   const { resourcename } = params
-  console.log(resourcename)
+
   return (
     <Layout>
       <Seo title="Resources" />
