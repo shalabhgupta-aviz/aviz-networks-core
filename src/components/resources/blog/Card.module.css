@@ -14,7 +14,6 @@
 
 .cardImage {
   width: 100%;
-  background-color: #f0f0f0;
   border-radius: 15px;
   overflow: hidden;
   margin-bottom: 30px;
@@ -59,11 +58,13 @@
     overflow: hidden;
 }
 
-.cardReadMore {
+.cardReadMore a {
     font-family: "Roboto", Arial, Helvetica, Sans-Serif;
     font-size: 14px;
     font-weight: 700;
     line-height: 19px;
     cursor: pointer;
+    color: #000;
+    text-decoration: none;
 }
 
