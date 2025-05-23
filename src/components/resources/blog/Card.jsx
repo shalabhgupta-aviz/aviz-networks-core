@@ -18,7 +18,9 @@ function Card(post) {
             year: "numeric",
           })}
         </div>
-        <div className={styles.cardTitle}>{title}</div>
+        <div className={styles.cardTitle}>
+          <Link to={`/resources/blogs/${slug}`}>{title}</Link>
+        </div>
         <div
           className={styles.cardDescription}
           dangerouslySetInnerHTML={{ __html: description }}
