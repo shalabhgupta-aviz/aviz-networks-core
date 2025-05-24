@@ -1,9 +1,7 @@
 import React from "react"
 import * as styles from "../Footer.module.css"
 import FooterColumn from "./FooterColumn"
-import logo from "../../images/aviz_logo.svg"
-import instagramIcon from "../../images/instagram-icon.svg"
-import twitterIcon from "../../images/twitter-icon.svg"
+import { StaticImage } from "gatsby-plugin-image"
 
 function FooterTop() {
   const quickLinks = [
@@ -31,7 +29,13 @@ function FooterTop() {
   return (
     <section className={styles.topSection}>
       <div className={styles.companyInfo}>
-        <img src={logo} alt="AVIZ Networks" className={styles.logo} />
+        <StaticImage
+          src={"../../images/aviz_logo.svg"}
+          alt="AVIZ Networks"
+          className={styles.logo}
+          width={234}
+          height={57}
+        />
         <h2 className={styles.tagline}>Open source network solutions</h2>
         <p className={styles.description}>
           Reimagine your networks with open-source SONiC and AI agents—gain
@@ -43,10 +47,22 @@ function FooterTop() {
       <FooterColumn title="Company" links={companyLinks} />
       <div className={styles.socialIcons}>
         <span className={styles.socialIcon}>
-          <img src={instagramIcon} alt="Instagram" />
+          <StaticImage
+            loading="lazy"
+            src={"../../images/instagram-icon.svg"}
+            alt="Instagram"
+            width={24}
+            height={24}
+          />
         </span>
         <span className={styles.socialIcon}>
-          <img src={twitterIcon} alt="Twitter" />
+          <StaticImage
+            loading="lazy"
+            src={"../../images/twitter-icon.svg"}
+            alt="Twitter"
+            width={24}
+            height={24}
+          />
         </span>
       </div>
     </section>

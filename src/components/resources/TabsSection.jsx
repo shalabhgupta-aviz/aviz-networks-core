@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, memo } from "react"
 import * as styles from "./TabsSection.module.css"
 import BlogList from "./blog/List"
 import { navigate } from "gatsby"
@@ -25,6 +25,52 @@ const SIDE_CATEGORIES = [
   { label: "Open Packet Broker", value: "open-packet-broker" },
   { label: "SONiC", value: "sonic" },
 ]
+
+// Custom hook for caching data
+const useCache = (key, fetchData, ttl = 5 * 60 * 1000) => {
+  const [data, setData] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    const fetchAndCache = async () => {
+      try {
+        // Check cache first
+        const cached = localStorage.getItem(key)
+        if (cached) {
+          const { data: cachedData, timestamp } = JSON.parse(cached)
+          if (Date.now() - timestamp < ttl) {
+            setData(cachedData)
+            setLoading(false)
+            return
+          }
+        }
+
+        // If no cache or expired, fetch new data
+        const newData = await fetchData()
+
+        // Cache the new data
+        localStorage.setItem(
+          key,
+          JSON.stringify({
+            data: newData,
+            timestamp: Date.now(),
+          })
+        )
+
+        setData(newData)
+      } catch (err) {
+        setError(err)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchAndCache()
+  }, [key, fetchData, ttl])
+
+  return { data, loading, error }
+}
 
 function TabsSection({ resourcename }) {
   const [activeTab, setActiveTab] = useState(null)
@@ -78,4 +124,5 @@ function TabsSection({ resourcename }) {
   )
 }
 
-export default TabsSection
+// Memoize the component to prevent unnecessary re-renders
+export default memo(TabsSection)

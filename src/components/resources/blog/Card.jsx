@@ -7,7 +7,7 @@ function Card(post) {
   return (
     <div className={styles.card}>
       <div className={styles.cardImage}>
-        <img src={image} alt={title} />
+        <img loading="lazy" srcSet={image} alt={title} />
       </div>
       <div className={styles.cardContent}>
         <div className={styles.cardDate}>

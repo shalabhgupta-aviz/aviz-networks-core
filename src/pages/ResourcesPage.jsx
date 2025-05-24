@@ -1,9 +1,10 @@
-import React from "react"
+import React, { lazy, Suspense } from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import HeroSection from "../components/resources/HeroSection"
-import TabsSection from "../components/resources/TabsSection"
 import SearchResourceSection from "../components/resources/SearchResourceSection"
+
+const TabsSection = lazy(() => import("../components/resources/TabsSection"))
 
 const ResourcesPage = ({ params }) => {
   const { resourcename } = params
@@ -13,7 +14,9 @@ const ResourcesPage = ({ params }) => {
       <Seo title="Resources" />
       <HeroSection />
       <SearchResourceSection />
-      <TabsSection resourcename={resourcename} />
+      <Suspense fallback={<div className="loading">Loading resources...</div>}>
+        <TabsSection resourcename={resourcename} />
+      </Suspense>
     </Layout>
   )
 }

@@ -7,7 +7,13 @@ const Header = ({ siteTitle }) => (
   <header className={styles.header}>
     <div className={styles.logo}>
       <Link to="/">
-        <img src={logo} alt="Aviz Logo" />
+        <img
+          loading="lazy"
+          width={234}
+          height={57}
+          srcSet={logo}
+          alt="Aviz Logo"
+        />
       </Link>
     </div>
     <nav className={styles.navigation}>
