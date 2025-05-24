@@ -1,0 +1,91 @@
+.blogLayoutRightSection {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow:0px 0px 19px 2px rgba(0, 0, 0, 0.23);
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: fit-content;
+}
+
+.authorSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #eee;
+}
+
+.authorName {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.authorRole {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #a259e6;
+}
+
+.recentPostsList,
+.quickLinksList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recentPostItem {
+  margin-bottom: 1rem;
+}
+
+.postTitle {
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: #222;
+}
+
+.postDate {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.quickLinksSection {
+  margin-top: 1.5rem;
+}
+
+.quickLink {
+  color: #a259e6;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  transition: text-decoration 0.2s;
+}
+
+.quickLink:hover,
+.quickLink:focus {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .blogLayoutRightSection {
+    max-width: 100%;
+    margin: 2rem 0 0 0;
+    padding: 1.5rem 1rem;
+  }
+}

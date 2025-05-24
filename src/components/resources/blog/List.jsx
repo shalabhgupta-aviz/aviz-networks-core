@@ -14,13 +14,12 @@ function List() {
         const response = await axios.get(
           "https://staging.aviznetworks.com/wp-json/wp/v2/posts"
         )
+        console.log(response.data)
         const formattedPosts = response.data.map(post => ({
           title: post.title.rendered,
           description: post.excerpt.rendered,
           date: post.date,
-          image:
-            post._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
-            "https://aviznetworks.com/wp-content/uploads/2025/05/ip-ones-3-BLOG-Banner.png",
+          image: post.yoast_head_json.og_image[0].url,
           slug: post.slug,
         }))
         setPosts(formattedPosts)

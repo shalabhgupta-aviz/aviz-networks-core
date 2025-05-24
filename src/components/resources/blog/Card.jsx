@@ -3,7 +3,6 @@ import * as styles from "./Card.module.css"
 import { Link } from "gatsby"
 
 function Card(post) {
-  console.log(post)
   const { title, description, date, image, slug } = post
   return (
     <div className={styles.card}>

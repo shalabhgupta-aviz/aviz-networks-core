@@ -26,34 +26,6 @@ const SIDE_CATEGORIES = [
   { label: "SONiC", value: "sonic" },
 ]
 
-const CARDS = [
-  {
-    id: 1,
-    tab: "case-studies",
-    category: "network-observability",
-    date: "18th Feb, 2025",
-    title:
-      "Deep Network Observability Improves 5G Mobile Subscriber User Experience",
-    description:
-      "Aviz's Deep Network Observability solution enhances 5G performance by providing real-time insights, seamless integration, and cost-effective scaling...",
-    image: "https://aviznetworks.com/wp-content/uploads/2025/05/5g-image.jpg",
-    link: "#",
-  },
-  {
-    id: 2,
-    tab: "case-studies",
-    category: "sonic",
-    date: "6th December, 2024",
-    title: "Aitire's Transition to Community SONiC with Aviz Networks",
-    description:
-      "How Aitire Achieved Cost-Efficient Networking and Future-Proofed Their Infrastructure. Aitire successfully transitioned to Community SONIC with Aviz...",
-    image:
-      "https://aviznetworks.com/wp-content/uploads/2025/05/sonic-transition.jpg",
-    link: "#",
-  },
-  // Add more mock cards as needed
-]
-
 function TabsSection({ resourcename }) {
   const [activeTab, setActiveTab] = useState(null)
   const [activeCategory, setActiveCategory] = useState("all")
@@ -63,12 +35,6 @@ function TabsSection({ resourcename }) {
       setActiveTab(0)
     }
   }, [resourcename])
-
-  const filteredCards = CARDS.filter(
-    card =>
-      card.tab === activeTab &&
-      (activeCategory === "all" || card.category === activeCategory)
-  )
 
   return (
     <section className={styles.tabsSection}>

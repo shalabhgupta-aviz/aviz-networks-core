@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import axios from "axios"
 import * as styles from "./BlogDetailLayout.module.css"
+import BannerSection from "./BannerSection"
+import BlogLayoutLeftSection from "./BlogLayoutLeftSection"
+import BlogLayoutRightSection from "./BlogLayoutRightSection"
+import BlogLayoutFooter from "./BlogLayoutFooter"
 
 function BlogDetailLayout({ resourcedetail, resourcename }) {
   const slug = resourcedetail
@@ -26,9 +30,7 @@ function BlogDetailLayout({ resourcedetail, resourcename }) {
           title: data.title.rendered,
           content: data.content.rendered,
           date: data.date,
-          image:
-            data._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
-            "https://aviznetworks.com/wp-content/uploads/2025/05/ip-ones-3-BLOG-Banner.png",
+          image: data.yoast_head_json.og_image[0].url,
         })
       } catch (err) {
         setError("Failed to fetch post")
@@ -48,7 +50,21 @@ function BlogDetailLayout({ resourcedetail, resourcename }) {
     return <div>Error: {error}</div>
   }
 
-  return <div className={styles.container}></div>
+  return (
+    <div className={styles.container}>
+      <BannerSection />
+      <div className={styles.blogLayout}>
+        <div className={styles.blogLayoutInnerContainer}>
+          <div className={styles.dateContainer}>May 16, 2025</div>
+          <div className={styles.sectionContainer}>
+            <BlogLayoutLeftSection post={post} />
+            <BlogLayoutRightSection post={post} />
+          </div>
+          <BlogLayoutFooter />
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default BlogDetailLayout

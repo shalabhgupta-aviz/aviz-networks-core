@@ -1,0 +1,133 @@
+.bannerSection {
+  position: relative;
+  min-height: 320px;
+  background: linear-gradient(90deg, #1a0826 0%, #0a0a23 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.bannerOverlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 40%, rgba(80, 0, 80, 0.5) 0%, rgba(10, 10, 35, 0.9) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bannerContent {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 2rem 1rem 2.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.breadcrumbNav {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.breadcrumbList {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  color: #fff;
+  justify-content: center;
+}
+
+.breadcrumbList li:not(:last-child)::after {
+  content: '>';
+  margin: 0 0.5rem;
+  color: #fff;
+}
+
+.breadcrumbList a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.breadcrumbList a:hover,
+.breadcrumbList a:focus {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.bannerTitle {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0 0 20px 0;
+  line-height: 42.3px;
+  color: #fff;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.3);
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.iconCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  border: 2px solid rgba(255,255,255,0.15);
+  transition: background 0.2s, border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  outline: none;
+}
+
+.iconCircle:focus,
+.iconCircle:hover {
+  background: #fff;
+  border-color: #9b57de;
+  box-shadow: 0 4px 16px rgba(155,87,222,0.15);
+}
+
+.iconCircle svg,
+.iconCircle img {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .bannerSection {
+    min-height: 220px;
+  }
+  .bannerTitle {
+    font-size: 1.3rem;
+    padding: 0 0.2rem;
+  }
+  .bannerContent {
+    padding: 1.2rem 0.2rem 1.5rem 0.2rem;
+  }
+  .iconCircle {
+    width: 38px;
+    height: 38px;
+  }
+  .iconCircle svg,
+  .iconCircle img {
+    width: 22px;
+    height: 22px;
+  }
+}

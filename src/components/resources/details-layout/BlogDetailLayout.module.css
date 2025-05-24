@@ -1,0 +1,27 @@
+.blogLayout {
+    background-color: #fff;
+}
+
+.blogLayoutInnerContainer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.dateContainer {
+    font-family: "Noto Sans", Arial, Helvetica, Sans-Serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: right;
+    padding: 10px;
+}
+
+.sectionContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
