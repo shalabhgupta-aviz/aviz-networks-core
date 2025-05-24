@@ -1,18 +1,17 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/
- */
+exports.createPages = ({ actions }) => {
+  const { createPage } = actions
 
-// You can delete this file if you're not using it
+  // Page to handle /resources/:resourcename (like a category page)
+  createPage({
+    path: "/resources/all", // static fallback path
+    matchPath: "/resources/:resourcename",
+    component: require.resolve("./src/pages/ResourcesPage.jsx"),
+  })
 
-exports.createPages = async ({ actions }) => {
-  const { createRedirect } = actions
-
-  // Dynamic redirects
-  createRedirect({
-    fromPath: `/resources/blogs/*`,
-    toPath: `/resources/blogs/:splat`,
-    isPermanent: true,
+  // Page to handle /resources/:resourcename/:resourcedetail (like blog detail)
+  createPage({
+    path: "/resources/all/details", // static fallback path
+    matchPath: "/resources/:resourcename/:resourcedetail",
+    component: require.resolve("./src/pages/ResourceDetailPage.jsx"),
   })
 }
